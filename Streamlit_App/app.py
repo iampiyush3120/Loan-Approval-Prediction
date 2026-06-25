@@ -11,7 +11,6 @@ st.title("🏦 Loan Approval Prediction")
 
 st.write("Enter Applicant Details")
 
-loan_id = st.number_input("Loan ID", value=1)
 dependents = st.number_input("Number of Dependents", value=0)
 education = st.selectbox("Education", ["Graduate", "Not Graduate"])
 self_emp = st.selectbox("Self Employed", ["No", "Yes"])
@@ -30,7 +29,6 @@ self_emp = 0 if self_emp == "No" else 1
 if st.button("Predict"):
 
     data = np.array([[
-        loan_id,
         dependents,
         education,
         self_emp,
